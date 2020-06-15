@@ -3,7 +3,8 @@ import sys
 import requests
 url='https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv'
 myfile=requests.get(url)
-open('/Users/jinkinsonsmith/Documents/Scripting/us-counties.csv','wb').write(myfile.content)
+#For the next step we need us-counties.csv from the requests.get just above to be in the current directory (which should be the case anyway).
+open('us-counties.csv','wb').write(myfile.content)
 file=open('us-counties.csv')
 lines=file.readlines()
 data=[]
